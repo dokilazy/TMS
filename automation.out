@@ -1,0 +1,164 @@
+2021-09-03 08:09:374 INFO  WaitHelper:21 - waiting for element visibilityOf..
+2021-09-03 08:09:441 INFO  WaitHelper:24 - element is visible..
+2021-09-03 08:09:582 INFO  WaitHelper:21 - waiting for element visibilityOf..
+2021-09-03 08:09:607 INFO  WaitHelper:24 - element is visible..
+2021-09-03 08:09:733 INFO  WaitHelper:21 - waiting for element visibilityOf..
+2021-09-03 08:09:765 INFO  WaitHelper:24 - element is visible..
+2021-09-03 08:09:884 INFO  WaitHelper:21 - waiting for element visibilityOf..
+2021-09-03 08:09:938 INFO  WaitHelper:24 - element is visible..
+2021-09-03 08:09:197 INFO  WaitHelper:21 - waiting for element visibilityOf..
+2021-09-03 08:09:236 INFO  WaitHelper:24 - element is visible..
+2021-09-03 08:09:209 INFO  WaitHelper:21 - waiting for element visibilityOf..
+2021-09-03 08:09:234 INFO  WaitHelper:24 - element is visible..
+2021-09-03 08:09:293 INFO  WaitHelper:21 - waiting for element visibilityOf..
+2021-09-03 08:09:837 INFO  WaitHelper:24 - element is visible..
+2021-09-03 08:09:552 INFO  WaitHelper:21 - waiting for element visibilityOf..
+2021-09-03 08:09:623 INFO  WaitHelper:24 - element is visible..
+2021-09-03 08:09:909 INFO  WaitHelper:21 - waiting for element visibilityOf..
+2021-09-03 08:09:981 INFO  WaitHelper:24 - element is visible..
+2021-09-03 08:09:275 INFO  WaitHelper:21 - waiting for element visibilityOf..
+2021-09-03 08:09:370 INFO  WaitHelper:24 - element is visible..
+2021-09-03 08:09:539 INFO  WaitHelper:21 - waiting for element visibilityOf..
+2021-09-03 08:09:567 INFO  WaitHelper:24 - element is visible..
+2021-09-03 08:09:562 INFO  WaitHelper:21 - waiting for element visibilityOf..
+2021-09-03 08:09:608 INFO  WaitHelper:24 - element is visible..
+2021-09-03 08:09:870 INFO  WaitHelper:21 - waiting for element visibilityOf..
+2021-09-03 08:09:899 INFO  WaitHelper:24 - element is visible..
+2021-09-03 08:09:947 INFO  WaitHelper:21 - waiting for element visibilityOf..
+2021-09-03 08:09:977 INFO  WaitHelper:24 - element is visible..
+2021-09-03 08:09:307 INFO  WaitHelper:21 - waiting for element visibilityOf..
+2021-09-03 08:09:345 INFO  WaitHelper:24 - element is visible..
+2021-09-03 08:09:58 INFO  WaitHelper:21 - waiting for element visibilityOf..
+2021-09-03 08:09:129 INFO  WaitHelper:24 - element is visible..
+2021-09-03 08:09:167 INFO  WaitHelper:21 - waiting for element visibilityOf..
+2021-09-03 08:09:208 INFO  WaitHelper:24 - element is visible..
+2021-09-03 08:09:303 INFO  ServiceHooks:43 - Registry a new account is pass
+2021-09-03 08:09:955 INFO  WaitHelper:21 - waiting for element visibilityOf..
+2021-09-03 08:09:00 INFO  WaitHelper:24 - element is visible..
+2021-09-03 08:09:333 INFO  WaitHelper:21 - waiting for element visibilityOf..
+2021-09-03 08:09:383 INFO  WaitHelper:24 - element is visible..
+2021-09-03 08:09:522 INFO  WaitHelper:21 - waiting for element visibilityOf..
+2021-09-03 08:09:552 INFO  WaitHelper:24 - element is visible..
+2021-09-03 08:09:686 INFO  WaitHelper:21 - waiting for element visibilityOf..
+2021-09-03 08:09:722 INFO  WaitHelper:24 - element is visible..
+2021-09-03 08:09:756 INFO  WaitHelper:21 - waiting for element visibilityOf..
+2021-09-03 08:09:889 INFO  WaitHelper:24 - element is visible..
+2021-09-03 08:09:919 INFO  WaitHelper:21 - waiting for element visibilityOf..
+2021-09-03 08:09:952 INFO  WaitHelper:24 - element is visible..
+2021-09-03 08:09:981 INFO  ServiceHooks:43 - Login with correct email and password is pass
+2021-09-03 08:09:691 INFO  WaitHelper:21 - waiting for element visibilityOf..
+2021-09-03 08:09:748 INFO  WaitHelper:24 - element is visible..
+2021-09-03 08:09:51 INFO  WaitHelper:21 - waiting for element visibilityOf..
+2021-09-03 08:09:101 INFO  WaitHelper:24 - element is visible..
+2021-09-03 08:09:323 INFO  WaitHelper:21 - waiting for element visibilityOf..
+2021-09-03 08:09:348 INFO  WaitHelper:24 - element is visible..
+2021-09-03 08:09:473 INFO  WaitHelper:21 - waiting for element visibilityOf..
+2021-09-03 08:09:499 INFO  WaitHelper:24 - element is visible..
+2021-09-03 08:09:582 INFO  WaitHelper:21 - waiting for element visibilityOf..
+2021-09-03 08:09:184 INFO  WaitHelper:24 - element is visible..
+2021-09-03 08:09:210 INFO  ServiceHooks:43 - Login with incorrect email or password is pass
+2021-09-03 08:09:824 INFO  WaitHelper:21 - waiting for element visibilityOf..
+2021-09-03 08:09:887 INFO  WaitHelper:24 - element is visible..
+2021-09-03 08:09:250 INFO  WaitHelper:21 - waiting for element visibilityOf..
+2021-09-03 08:09:305 INFO  WaitHelper:24 - element is visible..
+2021-09-03 08:09:520 INFO  WaitHelper:21 - waiting for element visibilityOf..
+2021-09-03 08:09:552 INFO  WaitHelper:24 - element is visible..
+2021-09-03 08:09:682 INFO  WaitHelper:21 - waiting for element visibilityOf..
+2021-09-03 08:09:716 INFO  WaitHelper:24 - element is visible..
+2021-09-03 08:09:867 INFO  WaitHelper:21 - waiting for element visibilityOf..
+2021-09-03 08:09:456 INFO  WaitHelper:24 - element is visible..
+2021-09-03 08:09:487 INFO  ServiceHooks:43 - Login with incorrect email or password is pass
+2021-09-03 08:09:49 INFO  WaitHelper:21 - waiting for element visibilityOf..
+2021-09-03 08:09:100 INFO  WaitHelper:24 - element is visible..
+2021-09-03 08:09:438 INFO  WaitHelper:21 - waiting for element visibilityOf..
+2021-09-03 08:09:503 INFO  WaitHelper:24 - element is visible..
+2021-09-03 08:09:655 INFO  WaitHelper:21 - waiting for element visibilityOf..
+2021-09-03 08:09:689 INFO  WaitHelper:24 - element is visible..
+2021-09-03 08:09:838 INFO  WaitHelper:21 - waiting for element visibilityOf..
+2021-09-03 08:09:893 INFO  WaitHelper:24 - element is visible..
+2021-09-03 08:09:291 INFO  WaitHelper:21 - waiting for element visibilityOf..
+2021-09-03 08:09:896 INFO  WaitHelper:24 - element is visible..
+2021-09-03 08:09:924 INFO  WaitHelper:21 - waiting for element visibilityOf..
+2021-09-03 08:09:956 INFO  WaitHelper:24 - element is visible..
+2021-09-03 08:09:41 INFO  WaitHelper:21 - waiting for element visibilityOf..
+2021-09-03 08:09:81 INFO  WaitHelper:24 - element is visible..
+2021-09-03 08:09:726 INFO  WaitHelper:21 - waiting for element visibilityOf..
+2021-09-03 08:09:773 INFO  WaitHelper:24 - element is visible..
+2021-09-03 08:09:880 INFO  ServiceHooks:43 - Sign out is pass
+2021-09-03 08:09:743 INFO  WaitHelper:21 - waiting for element visibilityOf..
+2021-09-03 08:09:775 INFO  WaitHelper:24 - element is visible..
+2021-09-03 08:09:832 INFO  WaitHelper:21 - waiting for element visibilityOf..
+2021-09-03 08:09:859 INFO  WaitHelper:24 - element is visible..
+2021-09-03 08:09:983 INFO  WaitHelper:21 - waiting for element visibilityOf..
+2021-09-03 08:09:14 INFO  WaitHelper:24 - element is visible..
+2021-09-03 08:09:105 INFO  WaitHelper:21 - waiting for element visibilityOf..
+2021-09-03 08:09:156 INFO  WaitHelper:24 - element is visible..
+2021-09-03 08:09:948 INFO  WaitHelper:21 - waiting for element visibilityOf..
+2021-09-03 08:09:987 INFO  WaitHelper:24 - element is visible..
+2021-09-03 08:09:898 INFO  WaitHelper:21 - waiting for element visibilityOf..
+2021-09-03 08:09:915 INFO  WaitHelper:24 - element is visible..
+2021-09-03 08:09:974 INFO  WaitHelper:21 - waiting for element visibilityOf..
+2021-09-03 08:09:530 INFO  WaitHelper:24 - element is visible..
+2021-09-03 08:09:561 INFO  WaitHelper:21 - waiting for element visibilityOf..
+2021-09-03 08:09:632 INFO  WaitHelper:24 - element is visible..
+2021-09-03 08:09:895 INFO  WaitHelper:21 - waiting for element visibilityOf..
+2021-09-03 08:09:978 INFO  WaitHelper:24 - element is visible..
+2021-09-03 08:09:119 INFO  WaitHelper:21 - waiting for element visibilityOf..
+2021-09-03 08:09:184 INFO  WaitHelper:24 - element is visible..
+2021-09-03 08:09:288 INFO  WaitHelper:21 - waiting for element visibilityOf..
+2021-09-03 08:09:322 INFO  WaitHelper:24 - element is visible..
+2021-09-03 08:09:430 INFO  WaitHelper:21 - waiting for element visibilityOf..
+2021-09-03 08:09:497 INFO  WaitHelper:24 - element is visible..
+2021-09-03 08:09:524 INFO  ServiceHooks:34 - Registry a new account is Failed
+2021-09-03 08:09:201 INFO  WaitHelper:21 - waiting for element visibilityOf..
+2021-09-03 08:09:230 INFO  WaitHelper:24 - element is visible..
+2021-09-03 08:09:527 INFO  WaitHelper:21 - waiting for element visibilityOf..
+2021-09-03 08:09:572 INFO  WaitHelper:24 - element is visible..
+2021-09-03 08:09:754 INFO  WaitHelper:21 - waiting for element visibilityOf..
+2021-09-03 08:09:788 INFO  WaitHelper:24 - element is visible..
+2021-09-03 08:09:890 INFO  WaitHelper:21 - waiting for element visibilityOf..
+2021-09-03 08:09:945 INFO  WaitHelper:24 - element is visible..
+2021-09-03 08:09:397 INFO  WaitHelper:21 - waiting for element visibilityOf..
+2021-09-03 08:09:02 INFO  WaitHelper:24 - element is visible..
+2021-09-03 08:09:37 INFO  WaitHelper:21 - waiting for element visibilityOf..
+2021-09-03 08:09:101 INFO  WaitHelper:24 - element is visible..
+2021-09-03 08:09:130 INFO  ServiceHooks:43 - Login with correct email and password is pass
+2021-09-03 08:09:967 INFO  WaitHelper:21 - waiting for element visibilityOf..
+2021-09-03 08:09:06 INFO  WaitHelper:24 - element is visible..
+2021-09-03 08:09:290 INFO  WaitHelper:21 - waiting for element visibilityOf..
+2021-09-03 08:09:341 INFO  WaitHelper:24 - element is visible..
+2021-09-03 08:09:488 INFO  WaitHelper:21 - waiting for element visibilityOf..
+2021-09-03 08:09:529 INFO  WaitHelper:24 - element is visible..
+2021-09-03 08:09:640 INFO  WaitHelper:21 - waiting for element visibilityOf..
+2021-09-03 08:09:688 INFO  WaitHelper:24 - element is visible..
+2021-09-03 08:09:667 INFO  WaitHelper:21 - waiting for element visibilityOf..
+2021-09-03 08:09:263 INFO  WaitHelper:24 - element is visible..
+2021-09-03 08:09:288 INFO  ServiceHooks:43 - Login with incorrect email or password is pass
+2021-09-03 08:09:942 INFO  WaitHelper:21 - waiting for element visibilityOf..
+2021-09-03 08:09:10 INFO  WaitHelper:24 - element is visible..
+2021-09-03 08:09:332 INFO  WaitHelper:21 - waiting for element visibilityOf..
+2021-09-03 08:09:387 INFO  WaitHelper:24 - element is visible..
+2021-09-03 08:09:521 INFO  WaitHelper:21 - waiting for element visibilityOf..
+2021-09-03 08:09:579 INFO  WaitHelper:24 - element is visible..
+2021-09-03 08:09:753 INFO  WaitHelper:21 - waiting for element visibilityOf..
+2021-09-03 08:09:834 INFO  WaitHelper:24 - element is visible..
+2021-09-03 08:09:843 INFO  WaitHelper:21 - waiting for element visibilityOf..
+2021-09-03 08:09:428 INFO  WaitHelper:24 - element is visible..
+2021-09-03 08:09:478 INFO  ServiceHooks:43 - Login with incorrect email or password is pass
+2021-09-03 08:09:84 INFO  WaitHelper:21 - waiting for element visibilityOf..
+2021-09-03 08:09:148 INFO  WaitHelper:24 - element is visible..
+2021-09-03 08:09:467 INFO  WaitHelper:21 - waiting for element visibilityOf..
+2021-09-03 08:09:511 INFO  WaitHelper:24 - element is visible..
+2021-09-03 08:09:682 INFO  WaitHelper:21 - waiting for element visibilityOf..
+2021-09-03 08:09:710 INFO  WaitHelper:24 - element is visible..
+2021-09-03 08:09:868 INFO  WaitHelper:21 - waiting for element visibilityOf..
+2021-09-03 08:09:910 INFO  WaitHelper:24 - element is visible..
+2021-09-03 08:09:25 INFO  WaitHelper:21 - waiting for element visibilityOf..
+2021-09-03 08:09:616 INFO  WaitHelper:24 - element is visible..
+2021-09-03 08:09:643 INFO  WaitHelper:21 - waiting for element visibilityOf..
+2021-09-03 08:09:674 INFO  WaitHelper:24 - element is visible..
+2021-09-03 08:09:776 INFO  WaitHelper:21 - waiting for element visibilityOf..
+2021-09-03 08:09:814 INFO  WaitHelper:24 - element is visible..
+2021-09-03 08:09:399 INFO  WaitHelper:21 - waiting for element visibilityOf..
+2021-09-03 08:09:464 INFO  WaitHelper:24 - element is visible..
+2021-09-03 08:09:622 INFO  ServiceHooks:43 - Sign out is pass

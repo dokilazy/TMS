@@ -1,0 +1,9 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 108.388 s <<< FAILURE! - in TestSuite
+com.tms.testRunner.TestRunner.feature[Update Email server information](3)  Time elapsed: 28.806 s  <<< FAILURE!
+cucumber.runtime.CucumberException: java.lang.AssertionError: expected [true] but found [false]
+	at com.tms.testRunner.TestRunner.feature(TestRunner.java:38)
+Caused by: java.lang.AssertionError: expected [true] but found [false]
+

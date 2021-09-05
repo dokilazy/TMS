@@ -1,0 +1,255 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+
+	<groupId>com</groupId>
+	<artifactId>tms</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+	<name>cucumberFramework</name>
+	<url>http://maven.apache.org</url>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<cucumber.version>5.7.0</cucumber.version>
+    	<testng.version>7.4.0</testng.version>
+		<selenium.version>3.141.5</selenium.version>
+    	<allure.cucumber5.version>2.14.0</allure.cucumber5.version>
+		<allure.version>2.14.0</allure.version>
+		<allure.maven.version>2.10.0</allure.maven.version>
+		<aspectj.version>1.9.6</aspectj.version>
+	
+	</properties>
+
+	<dependencies>
+
+		<dependency>
+			<groupId>info.cukes</groupId>
+			<artifactId>cucumber-java</artifactId>
+			<version>1.2.6</version>
+		</dependency>
+		<dependency>
+			<groupId>info.cukes</groupId>
+			<artifactId>cucumber-testng</artifactId>
+			<version>1.2.6</version>
+			<exclusions>
+				<exclusion>
+					<groupId>junit</groupId>
+					<artifactId>junit</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>  
+		
+<!--		<dependency>
+       <groupId>io.cucumber</groupId>
+       <artifactId>cucumber-java</artifactId>
+       <version>${cucumber.version}</version>
+   		 </dependency>
+
+	<dependency>
+       <groupId>io.cucumber</groupId>
+       <artifactId>cucumber-testng</artifactId>
+       <version>${cucumber.version}</version>
+        <scope>test</scope>
+    </dependency>
+   
+
+    <dependency>
+       <groupId>org.hamcrest</groupId>
+       <artifactId>hamcrest</artifactId>
+       <version>2.2</version>
+       <scope>test</scope>
+    </dependency>    
+  -->
+
+	
+<!--		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>messages</artifactId>
+			<version>16.0.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>html-formatter</artifactId>
+			<version>15.0.2</version>
+		</dependency>     
+-->
+
+	<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>gherkin</artifactId>
+			<version>19.0.3</version>
+		</dependency> 
+
+
+
+
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>${selenium.version}</version>
+		</dependency>
+
+
+
+		<!-- https://mvnrepository.com/artifact/log4j/log4j -->
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.17</version>
+		</dependency>
+
+	     <dependency>
+			<groupId>com.sikulix</groupId>
+			<artifactId>sikulixapi</artifactId> 
+		<!--<version>1.1.2</version>  -->
+			<version>2.0.5</version>  
+		 </dependency>
+		 
+
+
+
+<!--		 <dependency> 
+		 <groupId>io.qameta.allure</groupId> 
+		 <artifactId>allure-testng</artifactId> 
+		 <version>2.14.0</version> 
+		 </dependency> 
+-->
+	
+
+<!--		<dependency>
+    	<groupId>io.qameta.allure</groupId>
+    	<artifactId>allure-cucumber5-jvm</artifactId>
+    	<version>${allure.cucumber5.version}</version>
+		</dependency>
+-->
+
+	
+	</dependencies>
+
+
+	<build>
+		<plugins>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.1</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>3.2.0</version>
+			</plugin>
+
+		 <plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.0.0-M5</version>
+				<configuration>
+					<testFailureIgnore>true</testFailureIgnore>
+					<suiteXmlFiles>
+						<suiteXmlFile>testNg.xml</suiteXmlFile>  
+					</suiteXmlFiles>
+			
+
+					 
+				</configuration>  
+				
+				 <dependencies>
+                <dependency>
+                    <groupId>org.aspectj</groupId>
+                    <artifactId>aspectjweaver</artifactId>
+                    <version>${aspectj.version}</version>
+                </dependency>
+            </dependencies>   
+            
+			</plugin>    
+
+			
+			<plugin>
+                <groupId>io.qameta.allure</groupId>
+                <artifactId>allure-maven</artifactId>
+                <version>${allure.maven.version}</version>
+                <configuration>
+                    <reportVersion>${allure.version}</reportVersion>
+                </configuration>
+            </plugin>
+
+		<plugin>
+				<groupId>net.masterthought</groupId>
+				<artifactId>maven-cucumber-reporting</artifactId>
+				<version>5.5.0</version>
+				<executions>
+					<execution>
+						<id>execution</id>
+						<phase>verify</phase>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+						<configuration>
+							<projectName>TMS</projectName>  
+						<!-- <outputDirectory>target/cucumber-reports/advanced-reports</outputDirectory> -->
+							<outputDirectory>target/cucumber-reports/html-reports</outputDirectory>
+							<cucumberOutput>target/cucumber-reports/CucumberTestReport.json</cucumberOutput>
+							<buildNumber>1</buildNumber>
+							<parallelTesting>false</parallelTesting>
+							<skip>false</skip>
+							<inputDirectory>${project.build.directory}/cucumber-reports</inputDirectory>
+							<jsonFiles>
+								<param>**/*.json</param>
+							</jsonFiles>
+							<classificationDirectory>${project.build.directory}/cucumber-reports</classificationDirectory>
+							<enableFlashCharts>false</enableFlashCharts>
+							<skippedFails>true</skippedFails>
+							 <buildNumber>42</buildNumber>  
+						<!--<checkBuildResult>false</checkBuildResult>  -->
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>  
+
+
+			<plugin>
+				<groupId>com.trivago.rta</groupId>
+				<artifactId>cluecumber-report-plugin</artifactId>
+				<version>2.6.1</version>
+				<executions>
+					<execution>
+					<id>report</id>    
+					<!--	<id>execution</id>  -->
+					 <phase>post-integration-test</phase>  
+					<!--	<phase>verify</phase>   -->
+						<goals>
+							<goal>reporting</goal>  
+						</goals>
+				</execution>
+				</executions>
+				<configuration>
+					<sourceJsonReportDirectory>target/cucumber-reports/CucumberTestReport.json</sourceJsonReportDirectory>
+					<generatedHtmlReportDirectory>${project.build.directory}/my-clue-report</generatedHtmlReportDirectory>
+					<customParameters>
+						<Custom_Parameter>Cluecumber Test report</Custom_Parameter>
+						<Custom_URL>http://magento-dev.dallmeier.vn</Custom_URL>
+						<_Text>Test report for M2!</_Text>
+					</customParameters>
+					<customPageTitle>My Report</customPageTitle>
+					<skippedFails>true</skippedFails>
+				</configuration>
+				
+				
+			</plugin>    
+		</plugins>
+	</build>
+	
+
+</project>

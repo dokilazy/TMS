@@ -1,0 +1,138 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 5,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 6,
+            "name": "I am on the M2 Homepage",
+            "match": {
+              "location": "M2LoginStepDefinitions.i_am_on_the_M2_Homepage()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "line": 9,
+        "name": "Buy AlertFlow",
+        "description": "",
+        "id": "title-of-your-feature;buy-alertflow",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 10,
+            "name": "I sign in the page by email as \"m2test2@mailinator.com\" and password as \"dmvn@123\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"m2test2@mailinator.com\"",
+                  "offset": 31
+                },
+                {
+                  "val": " \"dmvn@123\"",
+                  "offset": 71
+                }
+              ],
+              "location": "M2LoginStepDefinitions.I_sign_in_page(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 11,
+            "name": "I add to cart the AlerFlow product",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 12,
+            "name": "I see the Add to cart page",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 13,
+            "name": "I click on Custommize button",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 14,
+            "name": "I see Customization area",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 15,
+            "name": "I click on Add to Cart",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 16,
+            "name": "I see the product added to shopping cart",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 17,
+            "name": "I click on Proceed to Checkout",
+            "match": {},
+            "keyword": "When "
+          }
+        ],
+        "tags": [
+          {
+            "line": 8,
+            "name": "@SmokeTest"
+          }
+        ]
+      }
+    ],
+    "name": "Title of your feature",
+    "description": "I want to use this template for my feature file",
+    "id": "title-of-your-feature",
+    "keyword": "Feature",
+    "uri": "src/test/resources/features/MCP/Purchase.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@tag"
+      }
+    ]
+  }
+]

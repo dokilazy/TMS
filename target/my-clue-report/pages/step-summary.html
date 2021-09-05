@@ -1,0 +1,996 @@
+
+    <!--
+    Copyright 2019 trivago N.V.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+    -->
+    <!DOCTYPE html>
+    <html lang="en">
+    <base href="..">
+    <head title="My Report - All Steps">
+        <title>My Report - All Steps</title>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta http-equiv="Content-Security-Policy" content="default-src *  data: blob: 'unsafe-inline' 'unsafe-eval';
+script-src * data: blob: 'unsafe-inline' 'unsafe-eval';
+connect-src * data: blob: 'unsafe-inline';
+img-src * data: blob: 'unsafe-inline';
+frame-src * data: blob: ;
+style-src * data: blob: 'unsafe-inline';
+font-src * data: blob: 'unsafe-inline';"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="My Report">
+<meta name="author" content="Cluecumber Report Plugin version 2.6.1">
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+<link rel="stylesheet" href="css/datatables.min.css">
+<link rel="stylesheet" href="css/dataTables.bootstrap4.min.css">
+<link rel="stylesheet" href="css/jquery.fancybox.min.css"/>
+<link rel="stylesheet" href="css/cluecumber.css" type="text/css">
+<link rel="stylesheet" href="css/cluecumber-custom.css"/>
+<link rel="stylesheet" href="css/cluecumber-additional.css"/>
+<script src="js/jquery.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/datatables.min.js"></script>
+<script src="js/jquery.fancybox.min.js"></script>
+<script src="js/Chart.bundle.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+            // Data tables
+            $('.renderAsDataTable').on('draw.dt', function () {
+                $('[data-toggle="tooltip"]').tooltip();
+            }).DataTable({
+                "oLanguage": {
+                    "sSearch": "Search:"
+                },
+                "pageLength": 25,
+                "responsive": true
+            });
+
+            $('.collapse').on('shown.bs.collapse', function (e) {
+                $(e.target).find("iframe").each(function (index, iframe) {
+                    resizeIframe(iframe);
+                })
+            });
+
+            // Lightbox
+            $("a.grouped_elements").fancybox();
+
+            // Tool tips
+            $('[data-toggle="tooltip"]').tooltip();
+
+            // Chart
+            var canvas = document.getElementById('chart-area');
+            var ctx = canvas.getContext("2d");
+            var chart = new Chart(ctx, {
+  "data": {
+    "labels": [
+      "I enter password and confirm password",
+      "I enter user as \"{}\"",
+      "I enter orginazation Name",
+      "I active account in mail box by open mail subject as \"{}\"",
+      "I enter port as \"{}\"",
+      "I click on Check Connection button",
+      "I enter SSL Trust as \"{}\"",
+      "I see an error message as {}",
+      "I see signed-out page",
+      "I enter email password as \"{}\"",
+      "I enter email as {}",
+      "I click on Sign In",
+      "I click Save",
+      "I enter host as {}",
+      "I should see success saving popup having text as \"{}\"",
+      "I see home page after 5s",
+      "I enter random first name and lastname",
+      "I should see mail has been verified success message",
+      "I enter password for login as {}",
+      "I see correct account information in my profile",
+      "I see the Home page with name displayed as {}",
+      "I can login by the registry account",
+      "I click on Sign out",
+      "I enter random email",
+      "I click Create an account in Registry page",
+      "I see a message for asking active account",
+      "I should see a popup having text as {}"
+    ],
+    "datasets": [
+      {
+        "data": [
+          1,
+          2,
+          1,
+          1,
+          2,
+          2,
+          2,
+          2,
+          1,
+          2,
+          4,
+          4,
+          2,
+          2,
+          2,
+          1,
+          1,
+          1,
+          4,
+          1,
+          2,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "backgroundColor": [
+          "rgba(40, 167, 69, 1.000)",
+          "rgba(40, 167, 69, 1.000)",
+          "rgba(40, 167, 69, 1.000)",
+          "rgba(40, 167, 69, 1.000)",
+          "rgba(40, 167, 69, 1.000)",
+          "rgba(40, 167, 69, 1.000)",
+          "rgba(40, 167, 69, 1.000)",
+          "rgba(40, 167, 69, 1.000)",
+          "rgba(40, 167, 69, 1.000)",
+          "rgba(40, 167, 69, 1.000)",
+          "rgba(40, 167, 69, 1.000)",
+          "rgba(40, 167, 69, 1.000)",
+          "rgba(40, 167, 69, 1.000)",
+          "rgba(40, 167, 69, 1.000)",
+          "rgba(40, 167, 69, 1.000)",
+          "rgba(40, 167, 69, 1.000)",
+          "rgba(40, 167, 69, 1.000)",
+          "rgba(40, 167, 69, 1.000)",
+          "rgba(40, 167, 69, 1.000)",
+          "rgba(40, 167, 69, 1.000)",
+          "rgba(40, 167, 69, 1.000)",
+          "rgba(40, 167, 69, 1.000)",
+          "rgba(40, 167, 69, 1.000)",
+          "rgba(40, 167, 69, 1.000)",
+          "rgba(40, 167, 69, 1.000)",
+          "rgba(40, 167, 69, 1.000)",
+          "rgba(40, 167, 69, 1.000)"
+        ],
+        "label": "passed"
+      },
+      {
+        "data": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "backgroundColor": [
+          "rgba(220, 53, 69, 1.000)",
+          "rgba(220, 53, 69, 1.000)",
+          "rgba(220, 53, 69, 1.000)",
+          "rgba(220, 53, 69, 1.000)",
+          "rgba(220, 53, 69, 1.000)",
+          "rgba(220, 53, 69, 1.000)",
+          "rgba(220, 53, 69, 1.000)",
+          "rgba(220, 53, 69, 1.000)",
+          "rgba(220, 53, 69, 1.000)",
+          "rgba(220, 53, 69, 1.000)",
+          "rgba(220, 53, 69, 1.000)",
+          "rgba(220, 53, 69, 1.000)",
+          "rgba(220, 53, 69, 1.000)",
+          "rgba(220, 53, 69, 1.000)",
+          "rgba(220, 53, 69, 1.000)",
+          "rgba(220, 53, 69, 1.000)",
+          "rgba(220, 53, 69, 1.000)",
+          "rgba(220, 53, 69, 1.000)",
+          "rgba(220, 53, 69, 1.000)",
+          "rgba(220, 53, 69, 1.000)",
+          "rgba(220, 53, 69, 1.000)",
+          "rgba(220, 53, 69, 1.000)",
+          "rgba(220, 53, 69, 1.000)",
+          "rgba(220, 53, 69, 1.000)",
+          "rgba(220, 53, 69, 1.000)",
+          "rgba(220, 53, 69, 1.000)",
+          "rgba(220, 53, 69, 1.000)"
+        ],
+        "label": "failed"
+      },
+      {
+        "data": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "backgroundColor": [
+          "rgba(255, 193, 7, 1.000)",
+          "rgba(255, 193, 7, 1.000)",
+          "rgba(255, 193, 7, 1.000)",
+          "rgba(255, 193, 7, 1.000)",
+          "rgba(255, 193, 7, 1.000)",
+          "rgba(255, 193, 7, 1.000)",
+          "rgba(255, 193, 7, 1.000)",
+          "rgba(255, 193, 7, 1.000)",
+          "rgba(255, 193, 7, 1.000)",
+          "rgba(255, 193, 7, 1.000)",
+          "rgba(255, 193, 7, 1.000)",
+          "rgba(255, 193, 7, 1.000)",
+          "rgba(255, 193, 7, 1.000)",
+          "rgba(255, 193, 7, 1.000)",
+          "rgba(255, 193, 7, 1.000)",
+          "rgba(255, 193, 7, 1.000)",
+          "rgba(255, 193, 7, 1.000)",
+          "rgba(255, 193, 7, 1.000)",
+          "rgba(255, 193, 7, 1.000)",
+          "rgba(255, 193, 7, 1.000)",
+          "rgba(255, 193, 7, 1.000)",
+          "rgba(255, 193, 7, 1.000)",
+          "rgba(255, 193, 7, 1.000)",
+          "rgba(255, 193, 7, 1.000)",
+          "rgba(255, 193, 7, 1.000)",
+          "rgba(255, 193, 7, 1.000)",
+          "rgba(255, 193, 7, 1.000)"
+        ],
+        "label": "skipped"
+      }
+    ]
+  },
+  "options": {
+    "scales": {
+      "xAxes": [
+        {
+          "ticks": {
+            "min": 0,
+            "stepSize": 0,
+            "display": false
+          },
+          "stacked": true,
+          "scaleLabel": {
+            "display": true,
+            "labelString": "27 Steps"
+          },
+          "stepSize": 0.0
+        }
+      ],
+      "yAxes": [
+        {
+          "ticks": {
+            "min": 0,
+            "stepSize": 4,
+            "display": true
+          },
+          "stacked": true,
+          "scaleLabel": {
+            "display": true,
+            "labelString": "Number of Usages"
+          },
+          "stepSize": 0.0
+        }
+      ]
+    },
+    "events": [
+      "click",
+      "mousemove"
+    ]
+  },
+  "type": "bar"
+});
+
+            var original;
+            if (chart.config.type === "pie") {
+                original = Chart.defaults.pie.legend.onClick;
+            } else {
+                original = Chart.defaults.global.legend.onClick;
+            }
+
+            chart.options.onClick = function (evt, elements) {
+                if (chart.config.type !== "pie") return;
+                chartArea = elements[0];
+                if (chartArea === undefined) return;
+                chartArea.hidden = !chartArea.hidden;
+                chart.update();
+                toggleVisibilityByStatus(chartArea._model.label, !chartArea.hidden)
+            };
+
+            chart.options.legend.onClick = function (evt, label) {
+                original.call(this, evt, label);
+                toggleVisibilityByStatus(label.text, label.hidden);
+            };
+
+            function toggleVisibilityByStatus(statusText, show) {
+                var card = $("#card_" + statusText);
+                if (card !== undefined) {
+                    if (show) {
+                        card.show();
+                    } else {
+                        card.hide();
+                    }
+                }
+
+                var row = $(".table-row-" + statusText);
+                if (row !== undefined) {
+                    if (show) {
+                        row.show();
+                    } else {
+                        row.hide();
+                    }
+                }
+            }
+
+
+            if (false) {
+                $(".btn-outline-secondary[data-cluecumber-item='before-after-hooks-button']").click();
+            }
+            if (false) {
+                $(".btn-outline-secondary[data-cluecumber-item='step-hooks-button']").click();
+            }
+            if (false) {
+                $(".btn-outline-secondary[data-cluecumber-item='doc-strings-button']").click();
+            }
+        }
+    );
+
+    function resizeIframe(iframe) {
+        iframe.style.height = (iframe.contentWindow.document.body.scrollHeight + 25) + 'px';
+    }
+</script>    </head>
+    <body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                                <a class="nav-link " href="pages/scenario-summary.html">All Scenarios</a>
+                    </li>
+                    <li class="nav-item">
+                                <a class="nav-link " href="pages/scenario-sequence.html">Scenario Sequence</a>
+                    </li>
+                    <li class="nav-item">
+                                <a class="nav-link " href="pages/tag-summary.html">All Tags</a>
+                    </li>
+                    <li class="nav-item">
+                                <a class="nav-link text-white" href="pages/step-summary.html">All Steps</a>
+                    </li>
+                    <li class="nav-item">
+                                <a class="nav-link " href="pages/feature-summary.html">All Features</a>
+                    </li>
+            </ul>
+            <span class="text-light">2021-08-29 12:45:03</span>
+        </div>
+    </nav>
+    <main role="main" class="container">
+        <div class="cluecumber-template">
+            <div class="pb-2 mt-4 mb-2 border-bottom">
+                    <h3>All Steps</h3>
+            </div>
+
+    <div class="row" id="step-summary">
+    <div class="col-sm-9  h-auto" data-cluecumber-item="card">
+        <div class="card h-100">
+                <div class="card-header">Step Summary Result Chart</div>
+            <div class="card-body">
+    <div id="canvas-holder" class="w-100 text-center" style="min-height: 15rem;" data-cluecumber-item="chart">
+        <canvas id="chart-area" class="w-100"></canvas>
+    </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3  h-auto" data-cluecumber-item="card">
+        <div class="card h-100">
+                <div class="card-header">Steps Summary</div>
+            <div class="card-body">
+            <ul class="list-group list-group-flush" data-cluecumber-item="step-summary">
+                <li class="list-group-item">
+                    27         Steps
+ in
+                    <br>
+                    7         Scenarios
+
+                </li>
+                <li class="list-group-item">
+                    6 passed     <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
+       title="passed"><span style="display:none">passed</span></i>
+
+                    <br>
+                    1 failed     <i class="color-failed cluecumber-icon icon-failed" data-toggle="tooltip"
+       title="failed"><span style="display:none">failed</span></i>
+
+                    <br>
+                    0 skipped    <i class="color-skipped cluecumber-icon icon-skipped" data-toggle="tooltip"
+       title="skipped"><span style="display:none">skipped</span></i>
+
+                </li>
+            </ul>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="row" id="available-steps">
+    <div class="col-sm-12  h-auto" data-cluecumber-item="card">
+        <div class="card h-100">
+                <div class="card-header">Available Steps</div>
+            <div class="card-body">
+            <table id="step_summary" class="table table-hover renderAsDataTable"
+                   data-cluecumber-item="step-summary-table">
+                <thead>
+                <tr>
+                    <th>Step</th>
+                    <th>Total</th>
+                    <th>    <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
+       title="passed"><span style="display:none">passed</span></i>
+</th>
+                    <th>    <i class="color-failed cluecumber-icon icon-failed" data-toggle="tooltip"
+       title="failed"><span style="display:none">failed</span></i>
+</th>
+                    <th>    <i class="color-skipped cluecumber-icon icon-skipped" data-toggle="tooltip"
+       title="skipped"><span style="display:none">skipped</span></i>
+</th>
+                    <th>Min Time</th>
+                    <th>Max Time</th>
+                    <th>Ø Time</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="text-left">
+                            <span data-toggle="tooltip" title="M2RegistryPageStepDefinitions.i_enter_random_password()">
+                                <a href="pages/step-scenarios/step_01769068401.html">I enter password and confirm password</a>
+                            </span>
+                        </td>
+                        <td class="text-right"><strong>1</strong></td>
+                        <td class="text-right">1</td>
+                        <td class="text-right">0</td>
+                        <td class="text-right">0</td>
+                        <td class="text-right small">
+                                <a href="pages/scenario-detail/scenario_1.html">0m 00s 236ms</a>
+                        </td>
+                        <td class="text-right small">
+                                <a href="pages/scenario-detail/scenario_1.html">0m 00s 236ms</a>
+                        </td>
+                        <td class="text-right small">0m 00s 236ms</td>
+                    </tr>
+                    <tr>
+                        <td class="text-left">
+                            <span data-toggle="tooltip" title="SettingsPageStepDefinitions.i_enter_user(String)">
+                                <a href="pages/step-scenarios/step_1533433507.html">I enter user as "{}"</a>
+                            </span>
+                        </td>
+                        <td class="text-right"><strong>2</strong></td>
+                        <td class="text-right">2</td>
+                        <td class="text-right">0</td>
+                        <td class="text-right">0</td>
+                        <td class="text-right small">
+                                <a href="pages/scenario-detail/scenario_7.html">0m 00s 122ms</a>
+                        </td>
+                        <td class="text-right small">
+                                <a href="pages/scenario-detail/scenario_6.html">0m 00s 133ms</a>
+                        </td>
+                        <td class="text-right small">0m 00s 128ms</td>
+                    </tr>
+                    <tr>
+                        <td class="text-left">
+                            <span data-toggle="tooltip" title="M2RegistryPageStepDefinitions.i_enter_random_orginazaionName()">
+                                <a href="pages/step-scenarios/step_516315200.html">I enter orginazation Name</a>
+                            </span>
+                        </td>
+                        <td class="text-right"><strong>1</strong></td>
+                        <td class="text-right">1</td>
+                        <td class="text-right">0</td>
+                        <td class="text-right">0</td>
+                        <td class="text-right small">
+                                <a href="pages/scenario-detail/scenario_1.html">0m 00s 058ms</a>
+                        </td>
+                        <td class="text-right small">
+                                <a href="pages/scenario-detail/scenario_1.html">0m 00s 058ms</a>
+                        </td>
+                        <td class="text-right small">0m 00s 058ms</td>
+                    </tr>
+                    <tr>
+                        <td class="text-left">
+                            <span data-toggle="tooltip" title="M2RegistryPageStepDefinitions.i_active_account(String)">
+                                <a href="pages/step-scenarios/step_736296676.html">I active account in mail box by open mail subject as "{}"</a>
+                            </span>
+                        </td>
+                        <td class="text-right"><strong>1</strong></td>
+                        <td class="text-right">1</td>
+                        <td class="text-right">0</td>
+                        <td class="text-right">0</td>
+                        <td class="text-right small">
+                                <a href="pages/scenario-detail/scenario_1.html">0m 09s 320ms</a>
+                        </td>
+                        <td class="text-right small">
+                                <a href="pages/scenario-detail/scenario_1.html">0m 09s 320ms</a>
+                        </td>
+                        <td class="text-right small">0m 09s 320ms</td>
+                    </tr>
+                    <tr>
+                        <td class="text-left">
+                            <span data-toggle="tooltip" title="SettingsPageStepDefinitions.i_enter_port(String)">
+                                <a href="pages/step-scenarios/step_1906240857.html">I enter port as "{}"</a>
+                            </span>
+                        </td>
+                        <td class="text-right"><strong>2</strong></td>
+                        <td class="text-right">2</td>
+                        <td class="text-right">0</td>
+                        <td class="text-right">0</td>
+                        <td class="text-right small">
+                                <a href="pages/scenario-detail/scenario_7.html">0m 00s 132ms</a>
+                        </td>
+                        <td class="text-right small">
+                                <a href="pages/scenario-detail/scenario_6.html">0m 00s 136ms</a>
+                        </td>
+                        <td class="text-right small">0m 00s 134ms</td>
+                    </tr>
+                    <tr>
+                        <td class="text-left">
+                            <span data-toggle="tooltip" title="SettingsPageStepDefinitions.i_click_on_Check_Connection_button()">
+                                <a href="pages/step-scenarios/step_1595682261.html">I click on Check Connection button</a>
+                            </span>
+                        </td>
+                        <td class="text-right"><strong>2</strong></td>
+                        <td class="text-right">2</td>
+                        <td class="text-right">0</td>
+                        <td class="text-right">0</td>
+                        <td class="text-right small">
+                                <a href="pages/scenario-detail/scenario_7.html">0m 00s 536ms</a>
+                        </td>
+                        <td class="text-right small">
+                                <a href="pages/scenario-detail/scenario_6.html">0m 00s 536ms</a>
+                        </td>
+                        <td class="text-right small">0m 00s 536ms</td>
+                    </tr>
+                    <tr>
+                        <td class="text-left">
+                            <span data-toggle="tooltip" title="SettingsPageStepDefinitions.i_enter_SSLTrust(String)">
+                                <a href="pages/step-scenarios/step_581479716.html">I enter SSL Trust as "{}"</a>
+                            </span>
+                        </td>
+                        <td class="text-right"><strong>2</strong></td>
+                        <td class="text-right">2</td>
+                        <td class="text-right">0</td>
+                        <td class="text-right">0</td>
+                        <td class="text-right small">
+                                <a href="pages/scenario-detail/scenario_6.html">0m 00s 154ms</a>
+                        </td>
+                        <td class="text-right small">
+                                <a href="pages/scenario-detail/scenario_7.html">0m 00s 174ms</a>
+                        </td>
+                        <td class="text-right small">0m 00s 164ms</td>
+                    </tr>
+                    <tr>
+                        <td class="text-left">
+                            <span data-toggle="tooltip" title="M2LoginStepDefinitions.i_see_Error_message(String)">
+                                <a href="pages/step-scenarios/step_0309149921.html">I see an error message as {}</a>
+                            </span>
+                        </td>
+                        <td class="text-right"><strong>2</strong></td>
+                        <td class="text-right">2</td>
+                        <td class="text-right">0</td>
+                        <td class="text-right">0</td>
+                        <td class="text-right small">
+                                <a href="pages/scenario-detail/scenario_4.html">0m 00s 068ms</a>
+                        </td>
+                        <td class="text-right small">
+                                <a href="pages/scenario-detail/scenario_3.html">0m 00s 069ms</a>
+                        </td>
+                        <td class="text-right small">0m 00s 068ms</td>
+                    </tr>
+                    <tr>
+                        <td class="text-left">
+                            <span data-toggle="tooltip" title="M2LoginStepDefinitions.I_see_signed_out_page()">
+                                <a href="pages/step-scenarios/step_1737314371.html">I see signed-out page</a>
+                            </span>
+                        </td>
+                        <td class="text-right"><strong>1</strong></td>
+                        <td class="text-right">1</td>
+                        <td class="text-right">0</td>
+                        <td class="text-right">0</td>
+                        <td class="text-right small">
+                                <a href="pages/scenario-detail/scenario_5.html">0m 00s 107ms</a>
+                        </td>
+                        <td class="text-right small">
+                                <a href="pages/scenario-detail/scenario_5.html">0m 00s 107ms</a>
+                        </td>
+                        <td class="text-right small">0m 00s 107ms</td>
+                    </tr>
+                    <tr>
+                        <td class="text-left">
+                            <span data-toggle="tooltip" title="SettingsPageStepDefinitions.i_enter_password(String)">
+                                <a href="pages/step-scenarios/step_1432471795.html">I enter email password as "{}"</a>
+                            </span>
+                        </td>
+                        <td class="text-right"><strong>2</strong></td>
+                        <td class="text-right">2</td>
+                        <td class="text-right">0</td>
+                        <td class="text-right">0</td>
+                        <td class="text-right small">
+                                <a href="pages/scenario-detail/scenario_7.html">0m 02s 173ms</a>
+                        </td>
+                        <td class="text-right small">
+                                <a href="pages/scenario-detail/scenario_6.html">0m 02s 173ms</a>
+                        </td>
+                        <td class="text-right small">0m 02s 173ms</td>
+                    </tr>
+                    <tr>
+                        <td class="text-left">
+                            <span data-toggle="tooltip" title="M2LoginStepDefinitions.i_enter_email(String)">
+                                <a href="pages/step-scenarios/step_855881936.html">I enter email as {}</a>
+                            </span>
+                        </td>
+                        <td class="text-right"><strong>4</strong></td>
+                        <td class="text-right">4</td>
+                        <td class="text-right">0</td>
+                        <td class="text-right">0</td>
+                        <td class="text-right small">
+                                <a href="pages/scenario-detail/scenario_5.html">0m 00s 217ms</a>
+                        </td>
+                        <td class="text-right small">
+                                <a href="pages/scenario-detail/scenario_4.html">0m 00s 262ms</a>
+                        </td>
+                        <td class="text-right small">0m 00s 233ms</td>
+                    </tr>
+                    <tr>
+                        <td class="text-left">
+                            <span data-toggle="tooltip" title="M2LoginStepDefinitions.i_click_on_SignIn()">
+                                <a href="pages/step-scenarios/step_606388983.html">I click on Sign In</a>
+                            </span>
+                        </td>
+                        <td class="text-right"><strong>4</strong></td>
+                        <td class="text-right">4</td>
+                        <td class="text-right">0</td>
+                        <td class="text-right">0</td>
+                        <td class="text-right small">
+                                <a href="pages/scenario-detail/scenario_3.html">0m 01s 654ms</a>
+                        </td>
+                        <td class="text-right small">
+                                <a href="pages/scenario-detail/scenario_5.html">0m 04s 347ms</a>
+                        </td>
+                        <td class="text-right small">0m 02s 867ms</td>
+                    </tr>
+                    <tr>
+                        <td class="text-left">
+                            <span data-toggle="tooltip" title="SettingsPageStepDefinitions.i_click_Save()">
+                                <a href="pages/step-scenarios/step_0632334762.html">I click Save</a>
+                            </span>
+                        </td>
+                        <td class="text-right"><strong>2</strong></td>
+                        <td class="text-right">2</td>
+                        <td class="text-right">0</td>
+                        <td class="text-right">0</td>
+                        <td class="text-right small">
+                                <a href="pages/scenario-detail/scenario_6.html">0m 00s 251ms</a>
+                        </td>
+                        <td class="text-right small">
+                                <a href="pages/scenario-detail/scenario_7.html">0m 00s 255ms</a>
+                        </td>
+                        <td class="text-right small">0m 00s 253ms</td>
+                    </tr>
+                    <tr>
+                        <td class="text-left">
+                            <span data-toggle="tooltip" title="SettingsPageStepDefinitions.i_enter_host(String)">
+                                <a href="pages/step-scenarios/step_677065600.html">I enter host as {}</a>
+                            </span>
+                        </td>
+                        <td class="text-right"><strong>2</strong></td>
+                        <td class="text-right">2</td>
+                        <td class="text-right">0</td>
+                        <td class="text-right">0</td>
+                        <td class="text-right small">
+                                <a href="pages/scenario-detail/scenario_6.html">0m 00s 170ms</a>
+                        </td>
+                        <td class="text-right small">
+                                <a href="pages/scenario-detail/scenario_7.html">0m 00s 188ms</a>
+                        </td>
+                        <td class="text-right small">0m 00s 179ms</td>
+                    </tr>
+                    <tr>
+                        <td class="text-left">
+                            <span data-toggle="tooltip" title="SettingsPageStepDefinitions.Success_message_display_with_fixed_msg(String)">
+                                <a href="pages/step-scenarios/step_464670569.html">I should see success saving popup having text as "{}"</a>
+                            </span>
+                        </td>
+                        <td class="text-right"><strong>2</strong></td>
+                        <td class="text-right">2</td>
+                        <td class="text-right">0</td>
+                        <td class="text-right">0</td>
+                        <td class="text-right small">
+                                <a href="pages/scenario-detail/scenario_7.html">0m 03s 803ms</a>
+                        </td>
+                        <td class="text-right small">
+                                <a href="pages/scenario-detail/scenario_6.html">0m 04s 339ms</a>
+                        </td>
+                        <td class="text-right small">0m 04s 071ms</td>
+                    </tr>
+                    <tr>
+                        <td class="text-left">
+                            <span data-toggle="tooltip" title="M2LoginStepDefinitions.i_see_homepage_after_5s()">
+                                <a href="pages/step-scenarios/step_020146350.html">I see home page after 5s</a>
+                            </span>
+                        </td>
+                        <td class="text-right"><strong>1</strong></td>
+                        <td class="text-right">1</td>
+                        <td class="text-right">0</td>
+                        <td class="text-right">0</td>
+                        <td class="text-right small">
+                                <a href="pages/scenario-detail/scenario_5.html">0m 06s 072ms</a>
+                        </td>
+                        <td class="text-right small">
+                                <a href="pages/scenario-detail/scenario_5.html">0m 06s 072ms</a>
+                        </td>
+                        <td class="text-right small">0m 06s 072ms</td>
+                    </tr>
+                    <tr>
+                        <td class="text-left">
+                            <span data-toggle="tooltip" title="M2RegistryPageStepDefinitions.i_enter_random_firtname_lastname()">
+                                <a href="pages/step-scenarios/step_1243378492.html">I enter random first name and lastname</a>
+                            </span>
+                        </td>
+                        <td class="text-right"><strong>1</strong></td>
+                        <td class="text-right">1</td>
+                        <td class="text-right">0</td>
+                        <td class="text-right">0</td>
+                        <td class="text-right small">
+                                <a href="pages/scenario-detail/scenario_1.html">0m 00s 150ms</a>
+                        </td>
+                        <td class="text-right small">
+                                <a href="pages/scenario-detail/scenario_1.html">0m 00s 150ms</a>
+                        </td>
+                        <td class="text-right small">0m 00s 150ms</td>
+                    </tr>
+                    <tr>
+                        <td class="text-left">
+                            <span data-toggle="tooltip" title="M2RegistryPageStepDefinitions.i_should_see_verified_success_message()">
+                                <a href="pages/step-scenarios/step_1489695211.html">I should see mail has been verified success message</a>
+                            </span>
+                        </td>
+                        <td class="text-right"><strong>1</strong></td>
+                        <td class="text-right">1</td>
+                        <td class="text-right">0</td>
+                        <td class="text-right">0</td>
+                        <td class="text-right small">
+                                <a href="pages/scenario-detail/scenario_1.html">0m 03s 608ms</a>
+                        </td>
+                        <td class="text-right small">
+                                <a href="pages/scenario-detail/scenario_1.html">0m 03s 608ms</a>
+                        </td>
+                        <td class="text-right small">0m 03s 608ms</td>
+                    </tr>
+                    <tr>
+                        <td class="text-left">
+                            <span data-toggle="tooltip" title="M2LoginStepDefinitions.i_enter_password(String)">
+                                <a href="pages/step-scenarios/step_01266159003.html">I enter password for login as {}</a>
+                            </span>
+                        </td>
+                        <td class="text-right"><strong>4</strong></td>
+                        <td class="text-right">4</td>
+                        <td class="text-right">0</td>
+                        <td class="text-right">0</td>
+                        <td class="text-right small">
+                                <a href="pages/scenario-detail/scenario_3.html">0m 00s 131ms</a>
+                        </td>
+                        <td class="text-right small">
+                                <a href="pages/scenario-detail/scenario_2.html">0m 00s 168ms</a>
+                        </td>
+                        <td class="text-right small">0m 00s 150ms</td>
+                    </tr>
+                    <tr>
+                        <td class="text-left">
+                            <span data-toggle="tooltip" title="M2RegistryPageStepDefinitions.I_see_correct_account_info_in_my_profile()">
+                                <a href="pages/step-scenarios/step_01738869325.html">I see correct account information in my profile</a>
+                            </span>
+                        </td>
+                        <td class="text-right"><strong>1</strong></td>
+                        <td class="text-right">1</td>
+                        <td class="text-right">0</td>
+                        <td class="text-right">0</td>
+                        <td class="text-right small">
+                                <a href="pages/scenario-detail/scenario_1.html">0m 01s 294ms</a>
+                        </td>
+                        <td class="text-right small">
+                                <a href="pages/scenario-detail/scenario_1.html">0m 01s 294ms</a>
+                        </td>
+                        <td class="text-right small">0m 01s 294ms</td>
+                    </tr>
+                    <tr>
+                        <td class="text-left">
+                            <span data-toggle="tooltip" title="M2LoginStepDefinitions.I_see_logged_in_page(String)">
+                                <a href="pages/step-scenarios/step_839939963.html">I see the Home page with name displayed as {}</a>
+                            </span>
+                        </td>
+                        <td class="text-right"><strong>2</strong></td>
+                        <td class="text-right">2</td>
+                        <td class="text-right">0</td>
+                        <td class="text-right">0</td>
+                        <td class="text-right small">
+                                <a href="pages/scenario-detail/scenario_5.html">0m 01s 601ms</a>
+                        </td>
+                        <td class="text-right small">
+                                <a href="pages/scenario-detail/scenario_2.html">0m 01s 602ms</a>
+                        </td>
+                        <td class="text-right small">0m 01s 601ms</td>
+                    </tr>
+                    <tr>
+                        <td class="text-left">
+                            <span data-toggle="tooltip" title="M2RegistryPageStepDefinitions.i_can_login_by_the_registed_account()">
+                                <a href="pages/step-scenarios/step_01761692077.html">I can login by the registry account</a>
+                            </span>
+                        </td>
+                        <td class="text-right"><strong>1</strong></td>
+                        <td class="text-right">1</td>
+                        <td class="text-right">0</td>
+                        <td class="text-right">0</td>
+                        <td class="text-right small">
+                                <a href="pages/scenario-detail/scenario_1.html">0m 04s 422ms</a>
+                        </td>
+                        <td class="text-right small">
+                                <a href="pages/scenario-detail/scenario_1.html">0m 04s 422ms</a>
+                        </td>
+                        <td class="text-right small">0m 04s 422ms</td>
+                    </tr>
+                    <tr>
+                        <td class="text-left">
+                            <span data-toggle="tooltip" title="M2LoginStepDefinitions.i_click_on_SignOut()">
+                                <a href="pages/step-scenarios/step_1624011068.html">I click on Sign out</a>
+                            </span>
+                        </td>
+                        <td class="text-right"><strong>1</strong></td>
+                        <td class="text-right">1</td>
+                        <td class="text-right">0</td>
+                        <td class="text-right">0</td>
+                        <td class="text-right small">
+                                <a href="pages/scenario-detail/scenario_5.html">0m 00s 553ms</a>
+                        </td>
+                        <td class="text-right small">
+                                <a href="pages/scenario-detail/scenario_5.html">0m 00s 553ms</a>
+                        </td>
+                        <td class="text-right small">0m 00s 553ms</td>
+                    </tr>
+                    <tr>
+                        <td class="text-left">
+                            <span data-toggle="tooltip" title="M2RegistryPageStepDefinitions.i_enter_random_email()">
+                                <a href="pages/step-scenarios/step_496893608.html">I enter random email</a>
+                            </span>
+                        </td>
+                        <td class="text-right"><strong>1</strong></td>
+                        <td class="text-right">1</td>
+                        <td class="text-right">0</td>
+                        <td class="text-right">0</td>
+                        <td class="text-right small">
+                                <a href="pages/scenario-detail/scenario_1.html">0m 00s 197ms</a>
+                        </td>
+                        <td class="text-right small">
+                                <a href="pages/scenario-detail/scenario_1.html">0m 00s 197ms</a>
+                        </td>
+                        <td class="text-right small">0m 00s 197ms</td>
+                    </tr>
+                    <tr>
+                        <td class="text-left">
+                            <span data-toggle="tooltip" title="M2RegistryPageStepDefinitions.i_click_Create_an_account_in_Registry_page()">
+                                <a href="pages/step-scenarios/step_0876268688.html">I click Create an account in Registry page</a>
+                            </span>
+                        </td>
+                        <td class="text-right"><strong>1</strong></td>
+                        <td class="text-right">1</td>
+                        <td class="text-right">0</td>
+                        <td class="text-right">0</td>
+                        <td class="text-right small">
+                                <a href="pages/scenario-detail/scenario_1.html">0m 08s 290ms</a>
+                        </td>
+                        <td class="text-right small">
+                                <a href="pages/scenario-detail/scenario_1.html">0m 08s 290ms</a>
+                        </td>
+                        <td class="text-right small">0m 08s 290ms</td>
+                    </tr>
+                    <tr>
+                        <td class="text-left">
+                            <span data-toggle="tooltip" title="M2RegistryPageStepDefinitions.i_see_an_message_asking_active_account()">
+                                <a href="pages/step-scenarios/step_01472833075.html">I see a message for asking active account</a>
+                            </span>
+                        </td>
+                        <td class="text-right"><strong>1</strong></td>
+                        <td class="text-right">1</td>
+                        <td class="text-right">0</td>
+                        <td class="text-right">0</td>
+                        <td class="text-right small">
+                                <a href="pages/scenario-detail/scenario_1.html">0m 00s 086ms</a>
+                        </td>
+                        <td class="text-right small">
+                                <a href="pages/scenario-detail/scenario_1.html">0m 00s 086ms</a>
+                        </td>
+                        <td class="text-right small">0m 00s 086ms</td>
+                    </tr>
+                    <tr>
+                        <td class="text-left">
+                            <span data-toggle="tooltip" title="SettingsPageStepDefinitions.Success_message_display(String)">
+                                <a href="pages/step-scenarios/step_01980770159.html">I should see a popup having text as {}</a>
+                            </span>
+                        </td>
+                        <td class="text-right"><strong>2</strong></td>
+                        <td class="text-right">1</td>
+                        <td class="text-right">1</td>
+                        <td class="text-right">0</td>
+                        <td class="text-right small">
+                                <a href="pages/scenario-detail/scenario_7.html">0m 00s 055ms</a>
+                        </td>
+                        <td class="text-right small">
+                                <a href="pages/scenario-detail/scenario_6.html">0m 01s 069ms</a>
+                        </td>
+                        <td class="text-right small">0m 00s 562ms</td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+        </div>
+    </div>
+    </div>
+        </div>
+    </main>
+
+<footer class="footer navbar-dark">
+    <div class="container-fluid">
+        <span>Cluecumber Report Plugin version 2.6.1 - Report generated on 2021-08-29 12:45:03.</span>
+    </div>
+</footer>    </body>
+    </html>
+
