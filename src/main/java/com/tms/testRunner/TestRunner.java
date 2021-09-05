@@ -21,7 +21,7 @@ import cucumber.api.testng.TestNGCucumberRunner;
 		plugin = {"pretty",
 		 "html:target/cucumber-reports/cucumber.html", "json:target/cucumber-reports/CucumberTestReport.json", "rerun:rerun/failed_scenarios.txt" },
 		monochrome = true, //display the console output in a proper readable format
-		dryRun = true ,  //to check the mapping is proper between feature file and step def file
+		dryRun = false ,  //to check the mapping is proper between feature file and step def file
 		tags = ("@SmokeTest, @RegressionTest"))
 
  public class TestRunner { //extends AbstractTestNGCucumberTests {
