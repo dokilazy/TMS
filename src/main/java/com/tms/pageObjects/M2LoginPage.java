@@ -68,8 +68,6 @@ public class M2LoginPage extends AbstractPage {
 	public void clickSignIn() {
 		waitHelper.WaitForElement(this.signInBtn, 3);
 		this.signInBtn.click();
-		waitHelper.WaitForElementInvisible(this.signInBtn, 3);
-		sleep(1);
 	}
 	
 	public void clickCreateAccount() {
