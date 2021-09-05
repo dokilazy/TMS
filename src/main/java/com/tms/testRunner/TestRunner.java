@@ -13,8 +13,9 @@ import cucumber.api.testng.TestNGCucumberRunner;
 
 @CucumberOptions(
 		
-		features = { //"src/test/resources/features/MCP/Register.feature" ,
-				"src/test/resources/features/MCP/SignIn.feature"
+		features = { "src/test/resources/features/MCP/Register.feature" ,
+				"src/test/resources/features/MCP/SignIn.feature",
+				"src/test/resources/features/Settings/emailSetup.feature"
 			}  , 
 		
 		glue = { "com/tms/stepdefinitions" }, 
