@@ -2,11 +2,10 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="BDD Test Suite" thread-count="1" verbose="3"
 	parallel="classes">
-    <test name="Retest scenario failed" preserve-order="true">
+    <test name="BDD Cucumber test" preserve-order="true">
         <classes>
             <class name="com.tms.testRunner.TestRunner"/>
         </classes>
-        
-        
+                    
     </test>
 </suite>

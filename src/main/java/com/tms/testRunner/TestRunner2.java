@@ -22,7 +22,7 @@ import cucumber.api.testng.TestNGCucumberRunner;
 		tags = ("@SmokeTest, @RegressionTest"))
 
 
- public class TestRunnerParallel { //extends AbstractTestNGCucumberTests {
+ public class TestRunner2 { //extends AbstractTestNGCucumberTests {
 	
 	private TestNGCucumberRunner testNGCucumberRunner;
 	   

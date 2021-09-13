@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="BDD Test Suite" thread-count="2" verbose="3"
+	parallel="classes">
+    <test name="BDD Cucumber Parallel test" preserve-order="true">
+        <classes>
+            <class name="com.tms.testRunner.TestRunner"/>
+        </classes>
+        
+        <classes>
+            <class name="com.tms.testRunner.TestRunner2"/>
+        </classes>
+        
+    </test>
+</suite>

@@ -16,7 +16,6 @@ import cucumber.api.testng.TestNGCucumberRunner;
 		features = { "src/test/resources/features/MCP/Register.feature" ,
 				"src/test/resources/features/MCP/SignIn.feature"
 			}  , 
-		
 		glue = { "com/tms/stepdefinitions" }, 
 		plugin = {"pretty",
 		 "html:target/cucumber-reports/cucumber.html", "json:target/cucumber-reports/CucumberTestReport.json", "rerun:rerun/failed_scenarios.txt" },
